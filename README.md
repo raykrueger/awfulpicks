@@ -1,7 +1,7 @@
 # AwfulPicks
 
 <div>
-<a href="http://opensource.org/licenses/gpl-3.0" target="_blank"><img src="http://img.shields.io/badge/license-GPL-3.0-blue.svg?style=flat" alt="License" align="right" hspace="2" /></a>
+<a href="http://opensource.org/licenses/gpl-3.0" target="_blank"><img src="http://img.shields.io/badge/license-GPL_3.0-blue.svg?style=flat" alt="License" align="right" hspace="2" /></a>
 <a href="https://github.com/andrewvaughan/awfulpicks/releases" target="_blank"><img src="http://img.shields.io/badge/release-0.0.0-blue.svg?style=flat" alt="Current Release" align="right" hspace="2" /></a>
 </div>
 <br clear="left"><br>
