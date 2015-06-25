@@ -1,0 +1,44 @@
+{
+    "name"        : "awfulpicks",
+    "version"     : "0.0.0",
+    "description" : "Truly awful college football picks",
+    "author"      : "Andrew Vaughan",
+    "homepage"    : "https://github.com/andrewvaughan/awfulpicks",
+    
+    "licenses": [
+        {
+            "type" : "GPLv3",
+            "url"  : "https://raw.githubusercontent.com/andrewvaughan/awfulpicks/master/LICENSE"
+        }
+    ],
+    
+    "repository"   : "andrewvaughan/awfulpicks",
+    "bugs"         : "https://github.com/andrewvaughan/awfulpicks/issues",
+    "contributors" : "https://github.com/andrewvaughan/awfulpicks/graphs/contributors",
+    
+    "keywords" : [
+        "awfulpicks",
+        "college",
+        "football",
+        "awful",
+        "picks",
+        "sports"
+    ],
+    
+    "main": "./src/index",
+    
+    "scripts": {
+        "start" : "node src/index"
+    },
+    
+    "engines": {
+        "node" : "~0.12.5",
+        "iojs" : "~2.3.1"
+    },
+    
+    "dependencies": {
+    },
+    
+    "devDependencies": {
+    }
+}
