@@ -1,0 +1,312 @@
+/**
+ * Standard source code configuration rules for AwfulPicks.  These are put in place to prevent code standards from
+ * overtaking pull requests and source control.  All contributions must follow these rules and pass tests prior to
+ * being accepted.
+ *
+ * More information on these rules can be found on the AwfulPicks Contribution Page:
+ * {@link https://github.com/andrewvaughan/awfulpicks/blob/master/CONTRIBUTING.md#code-standards}
+ *
+ * This rule file is driven by JSCS rules, which are defined here:
+ * {@link http://jscs.info/rules.html}
+ */
+
+{
+    
+    /*** SYSTEM ******************************************************************************************************
+     * 
+     * Certain standards are required to maintain cleanliness of the system and file structure.  In this case, only
+     * certain file extensions
+     * are allowed to have Javascript within them.
+     */
+    
+    
+    // Enable extra checks for documentation
+    "plugins": [
+        "jscs-jsdoc"
+    ],
+    
+    
+    // Only allow standard JS files
+    "fileExtensions": [
+        ".js",
+        ".json"
+    ],
+    
+    
+    
+    
+    /*** WHITE SPACE *************************************************************************************************
+     * 
+     * Space formatting is extremely important for code style due to diffs that are used when using source control.
+     * To prevent unnecessary commits due to formatting, Gizmoboard follows strict spacing standards.
+     */
+	
+    
+    // Require 4 spaces of indentation
+    "validateIndentation": 4,
+	
+    
+    // Don"t allow a mix of spaces and tabs (unless explicitly for formatting)
+    "disallowMixedSpacesAndTabs": "smart",
+    
+    
+    // Require spaces after a comment operator
+    "requireSpaceAfterLineComment": true,
+    
+    
+    // Don"t allow whitespace to trail after code
+    "disallowTrailingWhitespace": "ignoreEmptyLines",
+    
+    
+    // Require one line feed (for certain IDEs) at end of file
+    "requireLineFeedAtFileEnd": true,
+    
+    
+    // Only support LF line breaks (not CRLF)
+    "validateLineBreaks": "LF",
+    
+    
+    // Limit the length of lines, except in certain conditions (118 length due to GitHub views)
+    "maximumLineLength": {
+        "value": 118,
+        "tabSize": 1,
+        "allowComments": false,
+        "allowUrlComments": true,
+        "allowRegex": true
+    },
+    
+    
+    
+    
+    /*** VARIABLES AND KEYWORDS *************************************************************************************/
+    
+    
+    // Only allow single quotes for declarations
+    "validateQuoteMarks": "'",
+    
+    
+    // Only allow one var declaration per scope
+    "requireMultipleVarDecl": "onevar",
+    
+    
+    // Prevent older-style underscores around variable names
+    //"disallowDanglingUnderscores": true,
+    
+    
+    // Force developers to use explicit type conversion to prevent confusion and errors
+    "disallowImplicitTypeConversion": [
+        "boolean",
+        "binary",
+        "string"
+    ],
+    
+    
+    // Require spaces after specific keywords
+    "requireSpaceAfterKeywords": [
+        "if",
+        "else",
+        "for",
+        "while",
+        "do",
+        "switch",
+        "case",
+        "return",
+        "try",
+        "catch",
+        "typeof"
+    ],
+    
+    
+    // No multi-line strings without concatenation
+    "disallowMultipleLineStrings": true,
+    
+    
+    // Disallow certain keywords from being used
+    "disallowKeywords": [
+        "with"
+    ],
+    
+    
+    // Require newlines for most keywords
+    "requireKeywordsOnNewLine": [
+        "for",
+        "while",
+        "do",
+        "switch",
+        "try",
+        "case",
+        "default"
+    ],
+    
+    
+    // Prevent multiple lines for certain keywords
+    "disallowKeywordsOnNewLine": [
+        "catch",
+        "else"
+    ],
+    
+    
+    // Prevent quoted keywords in objects
+    "disallowQuotedKeysInObjects": true,
+    
+    
+    // Require curly braces around most keywords (but not case/default)
+    "requireCurlyBraces": [
+        "if",
+        "else",
+        "for",
+        "while",
+        "do",
+        "try",
+        "catch"
+    ],
+    
+    
+    // Don't allow extra commas on the last item in an array or object for best compatibility
+    "disallowTrailingComma": true,
+    
+    
+    // Don't allow the comma-first style
+    "requireCommaBeforeLineBreak": true,
+    
+    
+    // Case formatting control for variables
+    "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties",
+    
+    
+    
+    
+    /*** EXPRESSIONS AND CONDITIONALS *******************************************************************************/
+    
+    
+    // Require space padding for all conditional expressions
+    "requireSpacesInConditionalExpression": true,
+    
+    
+    // Require a space before and after every binary operator
+    "requireSpaceBeforeBinaryOperators": true,
+    
+    
+    // All binary operators must be followed by a space
+    "requireSpaceAfterBinaryOperators": true,
+    
+    
+    // Only require a space after "," and ":"
+    "disallowSpaceBeforeBinaryOperators": [
+        ":",
+        ","
+    ],
+    
+    
+    // Disallow spaces between unary operators
+    "disallowSpaceAfterPrefixUnaryOperators": true,
+    "disallowSpaceBeforePostfixUnaryOperators": true,
+    
+    
+    // Requires operators to appear before line breaks and not after.
+    "requireOperatorBeforeLineBreak": true,
+    
+    
+    // Require expressions to use dot notation whenever possible
+    "requireDotNotation": true,
+    
+    
+    // Force the "self" keyword when using safe context
+    "safeContextKeyword": [
+        "self"
+    ],
+    
+    
+    // Formatting expressions, we are
+    "disallowYodaConditions": true,
+    
+    
+    
+    
+    /*** BLOCKS AND FUNCTIONS ***************************************************************************************/
+    
+    
+    // No empty blocks (except for catch)
+    "disallowEmptyBlocks": true,
+    
+    
+    // Requires proper alignment in object literals (this is broken)
+    //"requireAlignedObjectValues": "ignoreLineBreak",
+    
+    
+    // Require space before all block statements
+    "requireSpaceBeforeBlockStatements": true,
+    
+    
+    // Require space padding in functions before all braces
+    "requireSpacesInFunction": {
+        "beforeOpeningCurlyBrace": true
+    },
+    
+    
+    // Disallow spaces inside brackets and parentheses
+    "disallowSpacesInsideObjectBrackets": "all",
+    "disallowSpacesInsideArrayBrackets": true,
+    "disallowSpacesInsideParentheses": true,
+    
+    
+    // No newlines allowed before blocks
+    "disallowNewlineBeforeBlockStatements": true,
+    
+    
+    // No newlines allowed to pad inside of blocks
+    "disallowPaddingNewlinesInBlocks": true,
+    
+    
+    // Prevent inline block declarations
+    "requireBlocksOnNewline": true,
+    
+    
+    // Require parentheses around immediately-invoked function expressions
+    "requireParenthesesAroundIIFE": true,
+    
+    
+    // Functions should not have a space between the name and opening parenthesis
+    "disallowSpacesInFunction": {
+        "beforeOpeningRoundBrace": true
+    },
+    
+    
+    // Constructors should always be capitalized
+    "requireCapitalizedConstructors": true,
+    
+    
+    
+    
+    /*** COMMENTS ***************************************************************************************************/
+    
+    
+    // Ensure that proper commenting is provided for all functions
+    "jsDoc": {
+        "checkParamNames": true,
+        "requireParamTypes": true,
+        "checkRedundantParams": true,
+        "checkReturnTypes": true,
+        "checkRedundantReturns": true,
+        "requireReturnTypes": true,
+        "checkTypes": true,
+        "requireHyphenBeforeDescription": true,
+        "enforceExistence": true
+    },
+    
+    
+    // Require cleanly-formatted comments
+    "requireCapitalizedComments": {
+        "allExcept": [
+            "globals",
+            "jshint"
+        ]
+    },
+    
+    
+    // Spacing before comments is required
+    "requirePaddingNewLinesBeforeLineComments": {
+        "allExcept": "firstAfterCurly"
+    }
+    
+}
