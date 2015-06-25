@@ -8,3 +8,7 @@ sudo: false
 cache:
     directories:
         - node_modules
+addons:
+    code_climate:
+        repo_token:
+            secure: "kj10zHdUqf4IYslyDcHaV8EjY2yYUXiyL9tcMYphiQIXuaQFkZHfl9G9UZaznQzZdKF+kB7BTZcBOkImITlCQl0f7kiXEMVjy3RcOyQTY2eWaQsTC9Sf7F4FXGMB43guH8G78+IfMvE//olxRJW6TIPI+i34YdBaejIRc2fEX/hL7xaxTPVr8/TIkNFqzPqI+/dItRGH4Itb9N3fF9t+GwfBKwFddFZi8/kYTijyzmBklaV5arpXhJ3zmTc1bnqdWhD2HnQaGJNHTOCihgt1KB9rpBR05PEDjlV679qUsD/aOhFnvWe16TuaqnNcFZ+Qjqm69Erq6fwwIHDBMHYYbH7VHY6IJRaoMFAAmYs2r+ja3S6KZl5G6CpGOf3+P2re72LcLuqcmLSWvOrvV6D3GtLqDVsnn1sd7op2SSiliSMoor9zX10VrGqVfQUMaKt8cK16n2lBjR2OxMIvKRvk51S43oIW16f/zD09pMGmTDQs0rDfAHFmAwLVV9kzOLzFfGzGbohguvreiI1sngQHt08ujv1W4gQwOfgnHxtH9fmPxH/+8d91B173AYQFgDPlXRb3hG9SeIpi02eTaK9iMV+dbc4WNbznZDFJ7LgbzyZVk8sUmh3pT7Xucg+PTN0tbFuD8Ktd1eI0XDyElCQcCrzMjLHuY8R4P6Zm+jlDyvk="
