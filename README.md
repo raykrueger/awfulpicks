@@ -28,7 +28,7 @@
 
 ### Release Policy
 
-Releases of Hipbot.js follow [Semantic Versioning](http://semver.org/) standards in a `MAJOR.MINOR.PATCH` versioning
+Releases of AwfulPicks follow [Semantic Versioning](http://semver.org/) standards in a `MAJOR.MINOR.PATCH` versioning
 scheme of the following format:
 
 * `MAJOR` - modified when major, incompatible changes are made to the library,
