@@ -1,6 +1,6 @@
 {
     "name"        : "awfulpicks",
-    "version"     : "0.0.0",
+    "version"     : "0.1.0",
     "private"     : true,
     "description" : "Truly awful college football picks",
     "author"      : "Andrew Vaughan",
