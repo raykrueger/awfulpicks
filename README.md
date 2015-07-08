@@ -26,6 +26,27 @@
 <br clear="left"><br>
 
 
+### Quick Start
+
+Vagrant and Docker files are provided for easy installation and server creation.  To create a development environment:
+
+1. Ensure [VirtualBox](https://www.virtualbox.org/wiki/Downloads), [Vagrant](https://www.vagrantup.com/), and [Docker](https://www.docker.com/) are installed
+2. Run `vagrant up --provider=docker`
+
+Alternatively, you can deploy the Docker image to a server for production use.
+
+
+### Building from Source
+
+You can also build AwfulPicks from source with NPM:
+
+1. Ensure [Node.js](https://nodejs.org/) is installed with NPM
+2. Run `npm install`
+3. Run `npm start`
+
+Tests and coverage analysis can be performed by invoking the `npm test` command.
+
+
 ### Release Policy
 
 Releases of AwfulPicks follow [Semantic Versioning](http://semver.org/) standards in a `MAJOR.MINOR.PATCH` versioning
