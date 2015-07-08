@@ -44,12 +44,12 @@ ENV PATH      $NVM_DIR/versions/node/v$NODE_VERSION/bin:$PATH
 ######################################################################################################################
 
 # Cache any Node.js dependencies with Docker
-ADD package.json /tmp/package.json
-RUN cd /tmp && npm install
-RUN mkdir -p /opt/app && cp -a /tmp/node_modules /opt/app/
+RUN mkdir -p /opt/app
+ADD package.json /opt/app/package.json
+WORKDIR /opt/app
+RUN npm install
 
 # Layer in our application
-WORKDIR /opt/app
 ADD . /opt/app
 
 EXPOSE 3000
